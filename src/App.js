@@ -1,39 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import Movies from "./components/Movies";
+import "./App.css";
 
-//state 동적데이터를 와랄랄라
+function App() {
+  const [loading, setLoading] = useState(true);
+  const [movies, setMovies] = useState("");
 
-// function App() {
-//   return <div>함수 컴포넌트</div>;
-// }
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: -1,
-    };
-  }
-  up = () => {
-    this.setState((state) => {
-      return { count: state.count + 1 };
-    });
-  };
-  down = () => {
-    this.setState((state) => {
-      return { count: state.count - 1 };
-    });
-  };
-
-  render() {
-    return (
-      <div>
-        <h1>카운터 : {this.state.count}</h1>
-        <button onClick={this.up}>+1</button>
-        <span> </span>
-        <button onClick={this.down}>-1</button>
-      </div>
+  async function getMovieApi() {
+    if (0 < movies.length) return;
+    const result = await axios.get(
+      "https://api.themoviedb.org/3/movie/popular?api_key=458fb5b18777c017f4cb010f58f0e3fc&page=3&language=ko&region=kr"
     );
+    setMovies(result.data.results);
+    setLoading(false);
   }
+
+  useEffect(() => {
+    getMovieApi();
+  }, []);
+
+  return (
+    <>
+      {loading ? (
+        <div>로딩중...</div>
+      ) : (
+        <>
+          <div>영화목록</div>
+          {movies.map((e) => {
+            return (
+              <Movies
+                movie_id={e.id}
+                post={e.poster_path}
+                over={e.overview}
+                aver={e.vote_average}
+                adu={e.adult}
+                lang={e.original_language}
+                release={e.release_date}
+                title={e.title}
+              ></Movies>
+            );
+          })}
+          {/* <Movies 
+            post={movies[0].poster_path}
+            over={movies[0].overview}
+            aver={movies[0].vote_average}
+            adu={movies[0].adult}
+            lang={movies[0].original_language}
+            release={movies[0].release_date}
+            title={movies[0].title}
+          ></Movies> */}
+        </>
+      )}
+    </>
+  );
 }
 
 export default App;
