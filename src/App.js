@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Switch, Route, Link } from "react-router-dom";
-import MovieInterface from "./components/MovieInterface";
-import ClickCount from "./components/ClickCount";
 import Menu from "./components/Menu";
+import "./App.css";
 function App() {
   return (
     <>
