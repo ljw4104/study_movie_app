@@ -1,0 +1,26 @@
+.yt_shorts {
+  background-color: rgb(26, 26, 26);
+  color: white;
+  padding: 10px;
+}
+.yt_shorts_name {
+  padding: 3px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.yt_shorts_img_block > div > img {
+  padding-top: 10px;
+  width: 170px;
+  height: 300px;
+  margin-right: 15px;
+}
+.yt_shorts_img_block {
+  overflow: scroll;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+}

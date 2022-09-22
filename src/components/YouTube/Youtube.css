@@ -1,0 +1,106 @@
+/* .body {
+  background-color: rgb(97, 97, 97);
+} */
+.content {
+  position: relative;
+  bottom: 10px;
+}
+.yt_top {
+  position: fixed;
+  top: 0px;
+  right: 8px;
+  left: 8px;
+  background-color: rgb(23, 23, 23);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(23, 23, 23);
+  z-index: 1;
+}
+.yt_top > div > .yt_time {
+  margin-left: 30px;
+  font-size: 20px;
+  position: relative;
+  top: -8px;
+}
+
+.yt_top_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+}
+.yt_lte {
+  position: relative;
+  top: -2px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.logo {
+  position: relative;
+  top: -20px;
+  margin-left: 10px;
+}
+.yt_two {
+  position: relative;
+  top: 10px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(23, 23, 23);
+  color: white;
+  padding: 0;
+  padding: 10px;
+}
+.yt_two > .content {
+  position: relative;
+  top: -10px;
+  font-size: 30px;
+}
+.yt_two > .content > span {
+  margin-right: 10px;
+}
+.yt_three {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+  background-color: rgb(23, 23, 23);
+  color: white;
+}
+.yt_three > div > span {
+  background-color: gray;
+  padding: 10px;
+  border: 0px solid gray;
+  border-radius: 35px;
+}
+.yt_three > div > span:hover {
+  background-color: white;
+  color: black;
+}
+.yt_three_content > span {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  right: 8px;
+  left: 8px;
+  color: white;
+  background-color: rgb(26, 26, 26);
+}
+.yt_footer_block {
+  position: relative;
+
+  padding: 10px 0px 10px 0px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

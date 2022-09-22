@@ -1,0 +1,60 @@
+.movie_data {
+  background-color: white;
+  margin: 30px;
+  padding: 30px;
+  color: gray;
+  position: relative;
+  -webkit-box-shadow: inset -1px 3px 8px 5px rgb(255, 203, 203),
+    2px 5px 16px 0px gray, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: inset -1px 3px 8px 5px rgb(255, 203, 203), 2px 5px 16px 0px gray,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.title {
+  color: black;
+  font-size: xx-large;
+  margin-top: 10px;
+}
+.movie {
+  background-color: grey;
+  color: aqua;
+}
+.movie_id {
+  color: brown;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid movie_id;
+  border-radius: 20px;
+  background-color: antiquewhite;
+  font-weight: bold;
+  font-size: larger;
+  margin: 10px;
+}
+.release {
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+}
+
+.movieinfo {
+  position: absolute;
+  border: 1px solid movie_id;
+  border-radius: 20px;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.adu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: aliceblue;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 50%;
+}
